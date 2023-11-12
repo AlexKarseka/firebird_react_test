@@ -1,0 +1,15 @@
+@import '../../styles/base';
+
+.button {
+  margin-top: 20px;
+  background: $pink-color-main;
+  border-radius: 100px;
+  border: 0;
+  width: 100%;
+  height: 50px;
+  font-weight: $font-weight-700;
+  font-size: $font-size-24;
+  line-height: $line-height-28;
+  color: $white-color-main;
+  letter-spacing: -0.4px;
+}
