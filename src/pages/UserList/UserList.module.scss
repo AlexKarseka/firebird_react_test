@@ -6,11 +6,16 @@
   gap: 20px;
   padding: 0 40px;
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 45px;
+  }
+
   h4 {
     font-size: $font-size-24;
     font-weight: $font-weight-800;
     margin: 0;
     text-transform: uppercase;
-    text-align: center;
   }
 }

@@ -6,6 +6,7 @@ import { userRemove, resetState, userSuccess, userFailure } from '../../redux/ac
 import { RootState } from '../../redux/store';
 import { IUsers } from "../../utils/interfaces";
 import { ListRow } from "./components/ListRow/ListRow";
+import { Button } from "../../components/Button/Button";
 
 import classes from "./UserList.module.scss";
 
@@ -42,7 +43,10 @@ export const UserList: FC = (): ReactElement => {
 
     return (
         <div className={classes.userList}>
-            <h4>List With All Users</h4>
+            <div className={classes.header}>
+                <h4>List With All Users</h4>
+                <Button openClick={() => handleResetState()} text="Reset" />
+            </div>
             {clients.map(user => <ListRow key={user.id} user={user} deleteUser={() => handleRemoveUser(user.id)} />)}
         </div>
     );

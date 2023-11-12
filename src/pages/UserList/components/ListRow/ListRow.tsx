@@ -35,11 +35,7 @@ export const ListRow: FC<ListRowProps> = ({ deleteUser, user:
                     <div className={classes.infoText}>{email}</div>
                 </div>
             </div>
-            <Button
-                openModal={deleteUser}
-                disabled={false}
-                text="Delete user"
-            />
+            <Button openClick={deleteUser} text="Delete user" />
             <Modal
                 isOpen={modalOpen}
                 onClose={() => setModalOpen(false)}

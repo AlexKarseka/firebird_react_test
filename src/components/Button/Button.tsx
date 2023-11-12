@@ -3,15 +3,14 @@ import { type FC, type ReactElement } from "react";
 import classes from "./Button.module.scss";
 
 interface ButtonProps {
-    openModal: () => void;
-    disabled: boolean;
+    openClick: () => void;
     text: string;
 }
 
-export const Button: FC<ButtonProps> = ({ openModal, disabled, text }): ReactElement => {
+export const Button: FC<ButtonProps> = ({ openClick, text }): ReactElement => {
     return (
         <>
-            <button className={classes.button} type="button" onClick={openModal} disabled={disabled}>
+            <button className={classes.button} type="button" onClick={openClick} >
                 {text}
             </button>
         </>
