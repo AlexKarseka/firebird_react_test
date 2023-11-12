@@ -6,12 +6,11 @@
   align-items: center;
   border: 1px solid $grey-color-border;
   border-radius: 50px;
-  padding: 16px;
+  padding: 10px;
   cursor: pointer;
   transition: 0.7s;
 
   &:hover {
-    transform: scale(1.02);
     background: $grey-color-main;
   }
 
@@ -19,7 +18,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    gap: 15px;
+    gap: 7px;
   }
 
   .header, .info {

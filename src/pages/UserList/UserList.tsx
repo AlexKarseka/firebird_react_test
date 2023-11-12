@@ -45,7 +45,7 @@ export const UserList: FC = (): ReactElement => {
         <div className={classes.userList}>
             <div className={classes.header}>
                 <h4>List With All Users</h4>
-                <Button openClick={() => handleResetState()} text="Reset" />
+                <Button buttonClick={() => handleResetState()} text="Reset" />
             </div>
             {clients.map(user => <ListRow key={user.id} user={user} deleteUser={() => handleRemoveUser(user.id)} />)}
         </div>
