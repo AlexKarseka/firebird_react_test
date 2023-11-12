@@ -29,7 +29,7 @@ export interface IUserCompany {
 }
 
 export interface IUserState {
-    clients: IUsers[];
+    users: IUsers[];
     loading: boolean;
     error: string | null;
 }

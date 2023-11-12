@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from "../../services/getUsers";
 import { userRemove, resetState, userSuccess, userFailure } from '../../redux/actions';
 import { RootState } from '../../redux/store';
+import { IUsers } from "../../utils/interfaces";
 import { Modal } from "../Modal/Modal";
 import { Button } from "../Button/Button";
 
@@ -11,7 +12,7 @@ import classes from "./UserList.module.scss";
 
 export const UserList: FC = (): ReactElement => {
     const dispatch = useDispatch();
-    const clients = useSelector((state: RootState) => state.clients.clients);
+    const clients: IUsers[] = useSelector((state: RootState) => state.clients.users);
     const loading: boolean = useSelector((state: RootState) => state.clients.loading);
     const error = useSelector((state: RootState) => state.clients.error);
 
@@ -23,8 +24,8 @@ export const UserList: FC = (): ReactElement => {
             .catch((error) => dispatch(userFailure(error.data.message)))
     }, [dispatch]);
 
-    const handleRemoveClient = (clientId: number): void => {
-        dispatch(userRemove(clientId));
+    const handleRemoveClient = (userId: number): void => {
+        dispatch(userRemove(userId));
     };
 
     const handleResetState = (): void => {

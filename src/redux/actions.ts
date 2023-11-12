@@ -1,14 +1,13 @@
 import { IUsers } from "../utils/interfaces";
 
-export const USER_REQUEST = 'USER_REQUEST';
 export const USER_SUCCESS = 'USER_SUCCESS';
 export const USER_FAILURE = 'USER_FAILURE';
 export const USER_REMOVE = 'REMOVE_CLIENT';
 export const RESET_STATE = 'RESET_STATE';
 
-export const userSuccess = (clients: IUsers[]) => ({
+export const userSuccess = (users: IUsers[]) => ({
     type: USER_SUCCESS,
-    payload: clients,
+    payload: users,
 });
 
 export const userFailure = (error: string) => ({
@@ -16,9 +15,9 @@ export const userFailure = (error: string) => ({
     payload: error,
 });
 
-export const userRemove = (clientId: number) => ({
+export const userRemove = (userId: number) => ({
     type: USER_REMOVE,
-    payload: clientId,
+    payload: userId,
 });
 
 export const resetState = () => ({
