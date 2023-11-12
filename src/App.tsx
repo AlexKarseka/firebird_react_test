@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import store from '../src/redux/store';
-import { UserList } from "./components/UserList/UserList";
+import { UserList } from "./pages/UserList/UserList";
 
 const App = () => {
   return (

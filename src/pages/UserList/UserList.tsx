@@ -5,8 +5,8 @@ import { getUsers } from "../../services/getUsers";
 import { userRemove, resetState, userSuccess, userFailure } from '../../redux/actions';
 import { RootState } from '../../redux/store';
 import { IUsers } from "../../utils/interfaces";
-import { Modal } from "../Modal/Modal";
-import { Button } from "../Button/Button";
+import { Modal } from "../../components/Modal/Modal";
+import { Button } from "../../components/Button/Button";
 
 import classes from "./UserList.module.scss";
 
