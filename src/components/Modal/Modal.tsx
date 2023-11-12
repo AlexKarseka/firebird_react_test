@@ -1,4 +1,4 @@
-import { type FC, type ReactElement } from "react";
+import type { FC, ReactElement, MouseEvent } from "react";
 
 import { IUserAddress, IUserCompany } from "../../utils/interfaces";
 
@@ -15,7 +15,7 @@ interface ModalProps {
 export const Modal: FC<ModalProps> = ({ isOpen, onClose, address, company }): ReactElement => {
     return (
         <div className={`${classes.modal} ${isOpen ? classes.modalOpen : ''}`} onClick={onClose}>
-            <div onClick={(event) => event.stopPropagation()}>
+            <div onClick={(event: MouseEvent<HTMLInputElement>) => event.stopPropagation()}>
                 <div className={classes.wrapper}>
                     <div className={classes.header}>
                         <Button buttonClick={onClose} text='Close' />

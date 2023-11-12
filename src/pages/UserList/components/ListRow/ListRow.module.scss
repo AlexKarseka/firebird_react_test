@@ -39,6 +39,13 @@
     }
   }
 
+  .infoText {
+    span {
+      background: $grey-color-border;
+      padding: 2px;
+    }
+  }
+
   .headerText {
     color: $grey-dark-color-border;
     font-weight: $font-weight-700;

@@ -9,9 +9,10 @@ import classes from "./ListRow.module.scss";
 interface ListRowProps {
     user: IUsers;
     deleteUser: () => void;
+    searchText: string
 }
 
-export const ListRow: FC<ListRowProps> = ({ deleteUser, user:
+export const ListRow: FC<ListRowProps> = ({ deleteUser, searchText, user:
     {
         username,
         name,
@@ -30,9 +31,9 @@ export const ListRow: FC<ListRowProps> = ({ deleteUser, user:
                     <div className={classes.headerText}>Email</div>
                 </div>
                 <div className={classes.info}>
-                    <div className={classes.infoText}>{name}</div>
-                    <div className={classes.infoText}>{username}</div>
-                    <div className={classes.infoText}>{email}</div>
+                    <div className={classes.infoText}>{searchText === name ? <span>{name}</span> : name}</div>
+                    <div className={classes.infoText}>{searchText === username ? <span>{username}</span> : username}</div>
+                    <div className={classes.infoText}>{searchText === email ? <span>{email}</span> : email}</div>
                 </div>
             </div>
             <Button buttonClick={deleteUser} text="Delete user" />
