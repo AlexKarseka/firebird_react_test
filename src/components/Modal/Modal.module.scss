@@ -36,6 +36,7 @@
     display: flex;
     justify-content: center;
     gap: 40px;
+    font-size: $font-size-16;
   }
 
   .data {
@@ -45,13 +46,11 @@
   }
 
   .left {
-    font-size: $font-size-16;
     width: 75px;
     margin-right: 2px;
   }
 
   .leftCompany {
-    font-size: $font-size-16;
     width: 140px;
     margin-right: 2px;
   }
@@ -59,5 +58,35 @@
   .right {
     color: $green-color-main;
     font-weight: $font-weight-700;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .modal {
+    padding: 10px;
+
+    .infoContainer {
+      flex-direction: column;
+      gap: 0;
+      font-size: $font-size-13;
+    }
+
+    .left, .leftCompany {
+      width: 90px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modal {
+    padding: 2px;
+
+    .infoContainer {
+      font-size: $font-size-10;
+    }
+
+    .left, .leftCompany {
+      width: 60px;
+    }
   }
 }
