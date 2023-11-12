@@ -1,14 +1,17 @@
 import { type FC, type ReactElement } from "react";
 
+import { IUserAddress, IUserCompany } from "../../utils/interfaces";
+
 import classes from "./Modal.module.scss";
 
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
-    modalData: any;
+    address: IUserAddress;
+    company: IUserCompany;
 }
 
-export const Modal: FC<ModalProps> = ({ isOpen, onClose, modalData }): ReactElement => {
+export const Modal: FC<ModalProps> = ({ isOpen, onClose, address, company }): ReactElement => {
     return (
         <div className={`${classes.modal} ${isOpen ? classes.modalOpen : ''}`} onClick={onClose}>
             <div onClick={(event) => event.stopPropagation()}>
@@ -17,17 +20,17 @@ export const Modal: FC<ModalProps> = ({ isOpen, onClose, modalData }): ReactElem
                     <div className={classes.title}>This is your plan</div>
                     <div className={classes.data}>
                         <div className={classes.left}>Duration:</div>
-                        <div className={classes.right}>{modalData.name}</div>
+                        <div className={classes.right}>{company.name}</div>
                     </div>
                     <div className={classes.data}>
                         <div className={classes.left}>Price:</div>
-                        <div className={classes.right}>{modalData.perMonth}</div>
+                        <div className={classes.right}>{company.name}</div>
                     </div>
                     <button
                         className={classes.button}
                         type="button"
                         onClick={(): void => {
-                            alert(`Payment ${modalData.perMonth}`)
+                            alert(`Payment ${company.name}`)
                         }}
                     >
                         Proceed with payment

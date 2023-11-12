@@ -1,12 +1,11 @@
-import { type FC, type ReactElement, useState, useEffect } from "react";
+import { type FC, type ReactElement, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getUsers } from "../../services/getUsers";
 import { userRemove, resetState, userSuccess, userFailure } from '../../redux/actions';
 import { RootState } from '../../redux/store';
 import { IUsers } from "../../utils/interfaces";
-import { Modal } from "../../components/Modal/Modal";
-import { Button } from "../../components/Button/Button";
+import { ListRow } from "./components/ListRow/ListRow";
 
 import classes from "./UserList.module.scss";
 
@@ -16,15 +15,13 @@ export const UserList: FC = (): ReactElement => {
     const loading: boolean = useSelector((state: RootState) => state.clients.loading);
     const error = useSelector((state: RootState) => state.clients.error);
 
-    const [modalOpen, setModalOpen] = useState<boolean>(false);
-
     useEffect((): void => {
         getUsers()
             .then((users) => dispatch(userSuccess(users)))
             .catch((error) => dispatch(userFailure(error.data.message)))
     }, [dispatch]);
 
-    const handleRemoveClient = (userId: number): void => {
+    const handleRemoveUser = (userId: number): void => {
         dispatch(userRemove(userId));
     };
 
@@ -45,17 +42,8 @@ export const UserList: FC = (): ReactElement => {
 
     return (
         <div className={classes.userList}>
-            <Modal
-                isOpen={modalOpen}
-                onClose={() => setModalOpen(false)}
-                modalData={{id: 1, name: "Vasia", perMonth: "Ka"}}
-            />
-            Тут будет список
-            <Button
-                openModal={() => setModalOpen(true)}
-                disabled={false}
-                text="тест"
-            />
+            <h4>List With All Users</h4>
+            {clients.map(user => <ListRow key={user.id} user={user} deleteUser={() => handleRemoveUser(user.id)} />)}
         </div>
     );
 };
