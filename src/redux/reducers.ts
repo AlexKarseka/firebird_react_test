@@ -1,4 +1,4 @@
-import { USER_SUCCESS, USER_FAILURE, USER_REMOVE, RESET_STATE } from './actions';
+import { USER_SUCCESS, USER_FAILURE, USER_REMOVE, RESET_STATE } from "./actions";
 import { IUsers, IUserState } from "../utils/interfaces";
 
 const initialState: IUserState = {
