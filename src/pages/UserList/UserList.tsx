@@ -53,7 +53,7 @@ export const UserList: FC = (): ReactElement => {
             <div className={classes.header}>
                 <h4>List With All Users</h4>
                 <Filter updateSearchParams={updateSearchParams} placeholder="Search" />
-                <Button buttonClick={() => handleResetState()} text="Reset" />
+                <Button buttonClick={() => handleResetState()} text="Reset" buttonType="reset" />
             </div>
             {clients.map(user => <ListRow
                 key={user.id}

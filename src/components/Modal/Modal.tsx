@@ -18,7 +18,7 @@ export const Modal: FC<ModalProps> = ({ isOpen, onClose, address, company }): Re
             <div onClick={(event: MouseEvent<HTMLInputElement>) => event.stopPropagation()}>
                 <div className={classes.wrapper}>
                     <div className={classes.header}>
-                        <Button buttonClick={onClose} text='Close' />
+                        <Button buttonClick={onClose} text='Close' buttonType="button" />
                     </div>
                     <h4>User Information</h4>
                     <div className={classes.infoContainer}>

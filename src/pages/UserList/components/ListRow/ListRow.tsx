@@ -36,7 +36,7 @@ export const ListRow: FC<ListRowProps> = ({ deleteUser, searchText, user:
                     <div className={classes.infoText}>{searchText === email ? <span>{email}</span> : email}</div>
                 </div>
             </div>
-            <Button buttonClick={deleteUser} text="Delete user" />
+            <Button buttonClick={deleteUser} text="Delete user" buttonType="button" />
             <Modal
                 isOpen={modalOpen}
                 onClose={() => setModalOpen(false)}
