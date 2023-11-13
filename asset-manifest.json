@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/firebird_react_test/static/css/main.4046a0a4.css",
-    "main.js": "/firebird_react_test/static/js/main.96455cb2.js",
+    "main.css": "/firebird_react_test/static/css/main.48bbbc99.css",
+    "main.js": "/firebird_react_test/static/js/main.a968d8b2.js",
     "static/js/787.a6437a80.chunk.js": "/firebird_react_test/static/js/787.a6437a80.chunk.js",
     "static/media/Roboto-Black.ttf": "/firebird_react_test/static/media/Roboto-Black.45715786ed948b799cf8.ttf",
     "static/media/Roboto-Bold.ttf": "/firebird_react_test/static/media/Roboto-Bold.63311334b795ce3b76e2.ttf",
     "static/media/Roboto-Light.ttf": "/firebird_react_test/static/media/Roboto-Light.03e629f6348896ffa23a.ttf",
     "static/media/Roboto-Regular.ttf": "/firebird_react_test/static/media/Roboto-Regular.f25bd05915c1a3468d3d.ttf",
     "index.html": "/firebird_react_test/index.html",
-    "main.4046a0a4.css.map": "/firebird_react_test/static/css/main.4046a0a4.css.map",
-    "main.96455cb2.js.map": "/firebird_react_test/static/js/main.96455cb2.js.map",
+    "main.48bbbc99.css.map": "/firebird_react_test/static/css/main.48bbbc99.css.map",
+    "main.a968d8b2.js.map": "/firebird_react_test/static/js/main.a968d8b2.js.map",
     "787.a6437a80.chunk.js.map": "/firebird_react_test/static/js/787.a6437a80.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4046a0a4.css",
-    "static/js/main.96455cb2.js"
+    "static/css/main.48bbbc99.css",
+    "static/js/main.a968d8b2.js"
   ]
 }
