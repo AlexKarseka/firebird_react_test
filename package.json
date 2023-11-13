@@ -2,7 +2,7 @@
   "name": "firebird",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alexkarseka.github.io/firebird_react_test",
+  "homepage": "https://alexkarseka.github.io/firebird_react_test/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
